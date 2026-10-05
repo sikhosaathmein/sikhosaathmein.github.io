@@ -24,8 +24,11 @@ header{background:var(--white);border-bottom:1px solid var(--line);position:stic
 nav{display:flex;gap:20px;flex-wrap:wrap}
 nav a{text-decoration:none;font-weight:700;font-size:.95rem;color:var(--ink2)}
 nav a:hover{color:var(--ink)}
+nav a.ytlink{background:#e62117;color:#fff;padding:4px 14px;border-radius:6px}
+nav a.ytlink:hover{background:#c41a11;color:#fff}
 .hero{background:var(--skymain);color:var(--ink);padding:72px 0 80px}
-.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.hero .wrap{max-width:1040px}
+.hero .wrap>div{max-width:640px}
 .hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.02em}
 .hero h1 em{font-style:normal;background:var(--sun);color:var(--ink);padding:0 .15em;border-radius:8px}
 .hero p{color:var(--ink);max-width:46ch;margin:18px 0 28px;font-size:1.1rem}
@@ -64,6 +67,10 @@ h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:12px}
 footer{background:#3aa6e6;color:var(--ink);padding:28px 0;font-size:.92rem;text-align:center}
 footer a{color:var(--ink);text-decoration:underline}
 @media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.hero{padding:48px 0 56px}.btn.ghost{margin:12px 0 0}section{padding:48px 0}}
+.topics{margin:0;padding-left:24px;max-width:720px;list-style:disc}
+.topics li{margin:0 0 14px;padding-left:4px}
+.topics li::marker{color:var(--skymain);font-size:1.2em}
+.topics strong{font-weight:800}
 </style>
 </head>
 <body>
@@ -75,7 +82,7 @@ footer a{color:var(--ink);text-decoration:underline}
       <a href="#about">About</a>
       <a href="#topics">Topics</a>
       <a href="#downloads">Downloads</a>
-      <a href="#youtube">YouTube</a>
+      <a class="ytlink" href="#youtube">YouTube</a>
     </nav>
   </div>
 </header>
@@ -87,12 +94,6 @@ footer a{color:var(--ink);text-decoration:underline}
         <h1>Sikho <em>Saath Mein</em></h1>
         <p>Learn Excel, Word and everyday computer skills step by step, with free practice files you can download.</p>
         <a class="btn" href="#downloads">Get practice files</a>
-        <a class="btn ghost" href="#topics">Browse topics</a>
-      </div>
-      <div class="keys" aria-hidden="true">
-        <div class="row"><span class="key hot">Ctrl</span><span class="plus">+</span><span class="key">C</span><span class="cap">Copy</span></div>
-        <div class="row"><span class="key hot">Ctrl</span><span class="plus">+</span><span class="key">V</span><span class="cap">Paste</span></div>
-        <div class="row"><span class="key hot">Ctrl</span><span class="plus">+</span><span class="key">Z</span><span class="cap">Undo</span></div>
       </div>
     </div>
   </div>
@@ -119,14 +120,14 @@ footer a{color:var(--ink);text-decoration:underline}
     <div class="wrap">
       <h2>What you can learn here</h2>
       <p class="lead">Every topic starts from zero and builds up with real examples.</p>
-      <div class="grid">
-        <div class="card"><div class="ic">📊</div><h3>MS Excel</h3><p>Formulas, VLOOKUP, IF, pivot tables, and practical sheets used in real offices.</p></div>
-        <div class="card"><div class="ic">📝</div><h3>MS Word</h3><p>Formatting, tables, mail merge, and tips to make clean, professional documents.</p></div>
-        <div class="card"><div class="ic">💻</div><h3>Computer Basics</h3><p>Files and folders, typing, the internet, and everything a new user needs first.</p></div>
-        <div class="card"><div class="ic">⌨️</div><h3>Keyboard Shortcuts</h3><p>Short key combinations that save hours of work every week.</p></div>
-        <div class="card"><div class="ic">🏢</div><h3>Office Tips &amp; Tricks</h3><p>Small habits and tools that make daily office work faster and easier.</p></div>
-        <div class="card"><div class="ic">🎯</div><h3>Job-Related Skills</h3><p>Computer skills that employers ask about in interviews and on the job.</p></div>
-      </div>
+      <ul class="topics">
+        <li><strong>MS Excel</strong> – Formulas, VLOOKUP, IF, pivot tables, and practical sheets used in real offices.</li>
+        <li><strong>MS Word</strong> – Formatting, tables, mail merge, and tips to make clean, professional documents.</li>
+        <li><strong>Computer Basics</strong> – Files and folders, typing, the internet, and everything a new user needs first.</li>
+        <li><strong>Keyboard Shortcuts</strong> – Short key combinations that save hours of work every week.</li>
+        <li><strong>Office Tips &amp; Tricks</strong> – Small habits and tools that make daily office work faster and easier.</li>
+        <li><strong>Job-Related Skills</strong> – Computer skills that employers ask about in interviews and on the job.</li>
+      </ul>
     </div>
   </section>
 
@@ -149,7 +150,7 @@ footer a{color:var(--ink);text-decoration:underline}
     <div class="wrap">
       <h2>Watch on YouTube</h2>
       <p>New tutorials every week. Subscribe so you never miss a lesson.</p>
-      <a class="btn" href="https://www.youtube.com/@Sikho_Saath_Mein" target="_blank" rel="noopener">Visit the channel</a>
+      <a class="btn" href="https://www.youtube.com/@YOUR_CHANNEL_NAME" target="_blank" rel="noopener">Visit the channel</a>
     </div>
   </section>
 </main>
